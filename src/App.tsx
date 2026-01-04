@@ -6,6 +6,7 @@ type Tile = {
   className: string;
   label: string;
   width: number;
+  imageSrc?: string;
 };
 
 type RowItem = Tile | { type: "filler" };
@@ -13,11 +14,11 @@ type RowItem = Tile | { type: "filler" };
 const BASE_TILE_HEIGHT = 240;
 
 const tiles: Tile[] = [
-  { id: "a", className: "red", label: "A", width: 600 },
-  { id: "b", className: "blue", label: "B", width: 380 },
-  { id: "c", className: "green", label: "C", width: 300 },
-  { id: "d", className: "orange", label: "D", width: 260 },
-  { id: "e", className: "purple", label: "E", width: 450 }
+  { id: "ecg", className: "red", label: "A", width: 600, imageSrc: "/assets/tile0.png"  },
+  { id: "b", className: "blue", label: "B", width: 380, imageSrc: "/assets/tile2.png"   },
+  { id: "c", className: "green", label: "C", width: 300, imageSrc: "/assets/tile3.png"   },
+  { id: "d", className: "orange", label: "D", width: 260, imageSrc: "/assets/tile4.png"   },
+  { id: "e", className: "purple", label: "E", width: 450, imageSrc: "/assets/tile1.png"   }
 ];
 
 function isTile(item: RowItem): item is Tile {
@@ -91,7 +92,9 @@ export default function App() {
                   key={`filler-${j}`}
                   className="filler"
                   style={{ height: BASE_TILE_HEIGHT * scale }}
-                />
+                  
+                >
+                  </div>
               ) : (
                 <div
                   key={item.id}
@@ -101,7 +104,11 @@ export default function App() {
                     height: BASE_TILE_HEIGHT * scale,
                   }}
                 >
-                  {item.label}
+                  {item.imageSrc ? (
+                    <img src={item.imageSrc} alt={item.label} className="tile-image" />
+                  ) : (
+                    item.label
+                  )}
                 </div>
               )
             )}

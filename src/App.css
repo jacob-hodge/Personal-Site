@@ -18,28 +18,24 @@ body {
 }
 
 .tile {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #000;
+  background: rgb(7, 26, 26);
 }
-
 .filler {
   flex: 1;
   background: #222;
+  border: 1px solid #000;
 }
 
-.red { background: #e63946; }
+/* .red { background: #e63946; }
 .blue { background: #457b9d; }
 .green { background: #2a9d8f; }
 .orange { background: #f4a261; }
-.purple { background: #9b5de5; }
-.teal { background: #264653; }
-.pink { background: #ff006e; }
-.indigo { background: #8338ec; }
+.purple { background: #9b5de5; } */
 
 .bottom {
   background: #111;
@@ -47,4 +43,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.tile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
