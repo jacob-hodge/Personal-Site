@@ -22,13 +22,11 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid #000;
   background: rgb(7, 26, 26);
 }
 .filler {
   flex: 1;
-  background: #222;
-  border: 1px solid #000;
+  background: rgb(7, 26, 26);
 }
 
 /* .red { background: #e63946; }
