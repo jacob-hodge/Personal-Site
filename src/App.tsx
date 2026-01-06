@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
-
 import { TileRow } from "./components/TileRow";
 import { computeRows } from "./layout/computeRows";
 import type { Tile, RowItem } from "./types/tile";
+import { ECGTile } from "./components/tiles/ECGTiles";
 
 const BASE_TILE_HEIGHT = 240;
 
 const tiles: Tile[] = [
-  { id: "ecg", className: "red", label: "A", width: 600 },
-  { id: "b", className: "blue", label: "B", width: 450 },
-  { id: "c", className: "green", label: "C", width: 260 },
-  { id: "d", className: "orange", label: "D", width: 260 },
-  { id: "e", className: "purple", label: "E", width: 450 }
+  { id: "ecg", className: "red", width: 600, component: ECGTile },
+  { id: "b", className: "blue",  width: 450 },
+  { id: "c", className: "green", width: 260 },
+  { id: "d", className: "orange",  width: 260 },
+  { id: "e", className: "purple",  width: 450 }
 ];
 
 export default function App() {

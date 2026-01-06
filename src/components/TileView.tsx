@@ -17,19 +17,32 @@ function getTileImage(tile: Tile) {
 }
 
 export function TileView({ tile, scale, height }: Props) {
+  const Content = tile.component;
+  const frameSrc = getTileImage(tile);
+
   return (
     <div
       className={`tile ${tile.className}`}
       style={{
         width: tile.width * scale,
-        height: height * scale
+        height: height * scale,
+        position: "relative",
       }}
     >
+      {/* Frame image */}
       <img
-        src={getTileImage(tile)}
-        alt={tile.label}
-        className="tile-image"
+        src={frameSrc}
+        alt=""
+        className="tile-frame"
+        draggable={false}
       />
+
+      {/* Tile content layer */}
+      {Content && (
+        <div className="tile-content">
+          <Content scale={scale} height={height} />
+        </div>
+      )}
     </div>
   );
 }
