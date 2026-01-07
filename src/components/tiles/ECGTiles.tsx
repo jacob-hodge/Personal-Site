@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { getECGSnippet } from "../../helpers/getECGSnippet";
 import { normalizeECG } from "../../helpers/normaliseECG";
 
-export const ECGTile: React.FC<{ padding?: { top: number; right: number; bottom: number; left: number } }> = ({ padding }) => {
+export const ECGTile: React.FC<{
+  scale: number;
+  height: number;
+  padding?: { top: number; right: number; bottom: number; left: number };
+}> = ({ padding }) => {
   const [data, setData] = useState<number[]>([]);
 
   useEffect(() => {

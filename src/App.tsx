@@ -6,6 +6,7 @@ import type { Tile, RowItem } from "./types/tile";
 import { ECGTile } from "./components/tiles/ECGTiles";
 
 const BASE_TILE_HEIGHT = 240;
+const BOTTOM_HEIGHT = 440;
 
 const tiles: Tile[] = [
   { id: "ecg", className: "red", width: 600, component: ECGTile },
@@ -54,10 +55,14 @@ export default function App() {
       </div>
 
       <div
-        className="bottom"
-        style={{ height: BASE_TILE_HEIGHT * scale * 1.8 }}
+        className="desk"
+        style={{ height: BOTTOM_HEIGHT * scale }}
       >
-        BOTTOM IMAGE AREA
+        <img className="desk-edge left" src="/assets/desk/left.png"  />
+        <div className="desk-cover left" />
+        <img className="desk-center" src="/assets/desk/centre.png"  />
+        <div className="desk-cover right" />
+        <img className="desk-edge right" src="/assets/desk/right.png"  />
       </div>
     </div>
   );
