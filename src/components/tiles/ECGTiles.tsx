@@ -13,7 +13,7 @@ export const ECGTile: React.FC<{
 
   useEffect(() => {
     getECGSnippet(20, 2).then(raw => setData(normalizeECG(raw)));
-    getECGTime().then((time: string) => setStartTime(time));
+    getECGTime().then((time : string) => setStartTime(time));
   }, []);
 
   if (!data.length) return null;
@@ -23,7 +23,7 @@ export const ECGTile: React.FC<{
   const pad = padding || { top: 20, right: 9, bottom: 5, left: 2 };
   const innerWidth = width - pad.left - pad.right;
   const innerHeight = height - pad.top - pad.bottom;
-
+  
   const path = data
     .map((y, i) => {
       const x = (i / (data.length - 1)) * innerWidth + pad.left;
@@ -55,9 +55,11 @@ export const ECGTile: React.FC<{
         stroke="#00ff9c"
         strokeWidth={5}
         vectorEffect="non-scaling-stroke"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
         filter="url(#glow)"
+        shapeRendering="crispEdges"
+        strokeDasharray="5,5"
       />
 
       {startTime && (
