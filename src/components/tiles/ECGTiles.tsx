@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getECGSnippet } from "../../helpers/getECGSnippet";
+import { getECGTime } from "../../helpers/getECGTime";
 import { normalizeECG } from "../../helpers/normaliseECG";
 
 export const ECGTile: React.FC<{
@@ -8,11 +9,11 @@ export const ECGTile: React.FC<{
   padding?: { top: number; right: number; bottom: number; left: number };
 }> = ({ padding }) => {
   const [data, setData] = useState<number[]>([]);
+  const [startTime, setStartTime] = useState<string>("");
 
   useEffect(() => {
-    getECGSnippet(20, 2).then(raw => {
-      setData(normalizeECG(raw));
-    });
+    getECGSnippet(20, 2).then(raw => setData(normalizeECG(raw)));
+    getECGTime().then((time: string) => setStartTime(time));
   }, []);
 
   if (!data.length) return null;
@@ -58,6 +59,18 @@ export const ECGTile: React.FC<{
         strokeLinejoin="round"
         filter="url(#glow)"
       />
+
+      {startTime && (
+        <text
+          x={pad.left}
+          y={height - pad.bottom / 2}
+          fill="#00ff9c"
+          fontSize={4}
+          filter="url(#glow)"
+        >
+          {startTime}
+        </text>
+      )}
     </svg>
   );
 };

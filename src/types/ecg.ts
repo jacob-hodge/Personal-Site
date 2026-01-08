@@ -4,5 +4,6 @@ export type ECGSamplePoint = {
 };
 
 export type ECGRecording = {
+  test_time: number;
   samples: ECGSamplePoint[];
 };
