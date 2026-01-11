@@ -26,7 +26,6 @@ pipeline {
             aws s3 sync dist/ s3://$S3_BUCKET \
               --delete \
               --cache-control "public, max-age=31536000, immutable" \
-              --acl public-read
           """
         }
       }
