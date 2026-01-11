@@ -58,11 +58,11 @@ export default function App() {
         className="desk"
         style={{ height: BOTTOM_HEIGHT * scale }}
       >
-        <img className="desk-edge left" src="/assets/desk/left.png"  />
-        <div className="desk-cover left" />
-        <img className="desk-center" src="/assets/desk/centre.png"  />
-        <div className="desk-cover right" />
-        <img className="desk-edge right" src="/assets/desk/right.png"  />
+        <img
+          className="desk-image"
+          src="/assets/desk.png"
+          alt="Desk"
+        />
       </div>
     </div>
   );
