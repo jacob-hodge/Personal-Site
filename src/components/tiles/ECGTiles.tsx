@@ -53,7 +53,7 @@ export const ECGTile: React.FC<{
         d={path}
         fill="none"
         stroke="#00ff9c"
-        strokeWidth={5}
+        strokeWidth={3}
         vectorEffect="non-scaling-stroke"
         strokeLinecap="square"
         strokeLinejoin="miter"

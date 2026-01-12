@@ -4,16 +4,17 @@ import { TileRow } from "./components/TileRow";
 import { computeRows } from "./layout/computeRows";
 import type { Tile, RowItem } from "./types/tile";
 import { ECGTile } from "./components/tiles/ECGTiles";
+import { AboutTile } from "./components/tiles/AboutTile";
 
 const BASE_TILE_HEIGHT = 240;
 const BOTTOM_HEIGHT = 440;
 
 const tiles: Tile[] = [
-  { id: "ecg", className: "red", width: 600, component: ECGTile },
-  { id: "b", className: "blue",  width: 450 },
-  { id: "c", className: "green", width: 260 },
-  { id: "d", className: "orange",  width: 260 },
-  { id: "e", className: "purple",  width: 450 }
+  { id: "about", className: "about", width: 600  ,  component: AboutTile },
+  { id: "health", className: "health", width: 450 ,  component: ECGTile },
+  { id: "activity", className: "activity", width: 260},
+  { id: "misc", className: "misc",  width: 260 },
+  { id: "tbd", className: "tbd",  width: 450 }
 ];
 
 export default function App() {
