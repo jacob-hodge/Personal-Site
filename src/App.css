@@ -11,6 +11,7 @@
       rgb(6, 20, 20) 70%,
       rgb(4, 14, 14) 100%
     );
+    font-family: var(--retro-font);
 }
 
 .app::before {
