@@ -5,6 +5,7 @@ import { computeRows } from "./layout/computeRows";
 import type { Tile, RowItem } from "./types/tile";
 import { ECGTile } from "./components/tiles/ECGTiles";
 import { AboutTile } from "./components/tiles/AboutTile";
+import { ActivityCalendar } from "./components/tiles/ActivityCalendar";
 
 const BASE_TILE_HEIGHT = 240;
 const BOTTOM_HEIGHT = 440;
@@ -12,7 +13,7 @@ const BOTTOM_HEIGHT = 440;
 const tiles: Tile[] = [
   { id: "about", className: "about", width: 600  ,  component: AboutTile },
   { id: "health", className: "health", width: 450 ,  component: ECGTile },
-  { id: "activity", className: "activity", width: 260},
+  { id: "activity", className: "activity", width: 260, component: ActivityCalendar},
   { id: "misc", className: "misc",  width: 260 },
   { id: "tbd", className: "tbd",  width: 450 }
 ];

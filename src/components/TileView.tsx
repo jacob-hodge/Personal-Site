@@ -29,7 +29,6 @@ export function TileView({ tile, scale, height }: Props) {
         position: "relative",
       }}
     >
-      {/* Frame image */}
       <img
         src={frameSrc}
         alt=""
@@ -37,7 +36,6 @@ export function TileView({ tile, scale, height }: Props) {
         draggable={false}
       />
 
-      {/* Tile content layer */}
       {Content && (
         <div className="tile-content">
           <Content scale={scale} height={height} />
