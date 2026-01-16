@@ -35,7 +35,7 @@ export const ActivityCalendar: React.FC<{
         <a href="https://github.com/jacob-hodge" target="_blank" rel="noopener noreferrer">
           <img src="/github.svg" alt="GitHub" className="github logo" />
         </a>
-        <a href="https://www.strava.com/athletes/29710746" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.strava.com/athletes/jacobhh" target="_blank" rel="noopener noreferrer">
           <img src="/strava.svg" alt="Strava" className="strava logo" />
         </a>
       </div>
