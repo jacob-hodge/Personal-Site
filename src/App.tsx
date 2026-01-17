@@ -6,6 +6,7 @@ import type { Tile, RowItem } from "./types/tile";
 import { ECGTile } from "./components/tiles/ECGTiles";
 import { AboutTile } from "./components/tiles/AboutTile";
 import { ActivityCalendar } from "./components/tiles/ActivityCalendar";
+import { Desk } from "./components/Desk";
 
 const BASE_TILE_HEIGHT = 240;
 const BOTTOM_HEIGHT = 440;
@@ -56,16 +57,7 @@ export default function App() {
         ))}
       </div>
 
-      <div
-        className="desk"
-        style={{ height: BOTTOM_HEIGHT * scale }}
-      >
-        <img
-          className="desk-image"
-          src="/assets/desk.png"
-          alt="Desk"
-        />
-      </div>
+      <Desk height={BOTTOM_HEIGHT * scale} />
     </div>
   );
 }
