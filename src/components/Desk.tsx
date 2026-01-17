@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/Desk.css";
+import { Keyboard } from "./Keyboard";
 
 export const Desk: React.FC<{
   height: number;
@@ -11,6 +12,7 @@ export const Desk: React.FC<{
         src="/assets/desk.png"
         alt="Desk"
       />
+      <Keyboard />
     </div>
   );
 };

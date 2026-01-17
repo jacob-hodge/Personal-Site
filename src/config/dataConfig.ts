@@ -5,7 +5,7 @@ export const GITHUB_BASE_URL =
   import.meta.env.VITE_GITHUB_BASE_URL;
 
 export const ECG_DATA_PATH =
-  import.meta.env.VITE_ECG_DATA_PATH ?? "/mock/sample.json";
+  import.meta.env.VITE_ECG_DATA_PATH ?? "/mock/ecg.json";
 
 export const ACTIVITY_DATA_PATH = 
   import.meta.env.VITE_ACTIVITY_DATA_PATH;
