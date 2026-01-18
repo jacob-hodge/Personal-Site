@@ -57,7 +57,11 @@ export default function App() {
         ))}
       </div>
 
-      <Desk height={BOTTOM_HEIGHT * scale} />
+      <Desk
+        baseHeight={BOTTOM_HEIGHT}
+        scale={scale}
+      />
+
     </div>
   );
 }
