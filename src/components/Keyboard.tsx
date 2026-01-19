@@ -15,7 +15,7 @@ export const Keyboard: React.FC = () => {
             key={key.id}
             src={key.src}
             alt={key.id}
-            className="key"
+            className={`key ${key.id}`}
             style={{
               left: `${(key.left / 79) * 100}%`,
               top: `${(key.top / 24) * 100}%`,

@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/FeedbackTile.css";
 
 type Padding = { top: number; right: number; bottom: number; left: number };
 
-export const FeedbackTile: React.FC<{
-  padding?: Padding;
-}> = ({ padding }) => {
+export const FeedbackTile: React.FC<{ padding?: Padding }> = ({ padding }) => {
   const pad: Padding = padding || { top: 35, right: 25, bottom: 10, left: 10 };
   const [feedback, setFeedback] = useState("");
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const keyEl = document.querySelector<HTMLElement>(`.key.${e.code}`);
+      if (keyEl) keyEl.style.transform = "translateY(8px)";
+    };
+
+    const handleKeyUp = (e: KeyboardEvent) => {
+      const keyEl = document.querySelector<HTMLElement>(`.key.${e.code}`);
+      if (keyEl) keyEl.style.transform = "translateY(0)";
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
 
   const handleSubmit = () => {
     console.log("Feedback submitted:", feedback);
