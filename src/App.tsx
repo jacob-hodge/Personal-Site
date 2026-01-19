@@ -6,6 +6,7 @@ import type { Tile, RowItem } from "./types/tile";
 import { ECGTile } from "./components/tiles/ECGTiles";
 import { AboutTile } from "./components/tiles/AboutTile";
 import { ActivityCalendar } from "./components/tiles/ActivityCalendar";
+import { FeedbackTile } from "./components/tiles/FeedbackTile";
 import { Desk } from "./components/Desk";
 
 const BASE_TILE_HEIGHT = 240;
@@ -15,7 +16,7 @@ const tiles: Tile[] = [
   { id: "about", className: "about", width: 600  ,  component: AboutTile },
   { id: "health", className: "health", width: 450 ,  component: ECGTile },
   { id: "activity", className: "activity", width: 260, component: ActivityCalendar},
-  { id: "misc", className: "misc",  width: 260 },
+  { id: "feedback", className: "feedback",  width: 260, component: FeedbackTile },
   { id: "tbd", className: "tbd",  width: 450 }
 ];
 
