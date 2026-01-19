@@ -8,6 +8,14 @@
 .desk-image {
   height: 100%;
   width: auto;
+  object-fit: contain;
   image-rendering: pixelated;
   display: block;
+  margin: 0 auto;
+}
+
+.desk-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }

@@ -20,8 +20,10 @@ export const Desk: React.FC<{
         src="/assets/desk.png"
         alt="Desk"
       />
-      <Keyboard/>
+
+      <div className="desk-overlay">
+        <Keyboard />
+      </div>
     </div>
-    
   );
 };
