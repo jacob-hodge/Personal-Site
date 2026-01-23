@@ -1,0 +1,13 @@
+.split-button {
+  width: 100%;
+  padding: 8px 0;
+  background-color: #00ff9c;
+  color: #000;
+  font-family: var(--retro-font);
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}

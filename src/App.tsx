@@ -8,6 +8,7 @@ import { AboutTile } from "./components/tiles/AboutTile";
 import { ActivityCalendar } from "./components/tiles/ActivityCalendar";
 import { FeedbackTile } from "./components/tiles/FeedbackTile";
 import { Desk } from "./components/Desk";
+import { LangtonsAntTile } from "./components/tiles/LangtonsAnt";
 
 const BASE_TILE_HEIGHT = 240;
 const BOTTOM_HEIGHT = 440;
@@ -17,7 +18,7 @@ const tiles: Tile[] = [
   { id: "health", className: "health", width: 450 ,  component: ECGTile },
   { id: "activity", className: "activity", width: 260, component: ActivityCalendar},
   { id: "feedback", className: "feedback",  width: 260, component: FeedbackTile },
-  { id: "tbd", className: "tbd",  width: 450 }
+  { id: "simul", className: "simul",  width: 450, component: LangtonsAntTile }
 ];
 
 export default function App() {
